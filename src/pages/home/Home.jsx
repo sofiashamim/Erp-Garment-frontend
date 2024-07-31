@@ -7,14 +7,12 @@ import Chart from "../../components/chart/Chart";
 import {  useState } from "react";
 import { Layout, Menu } from "antd";
 
-const Home = () => {
-  const [collapsed, setCollapsed] = useState(false);
+const Home = (props) => {
+  const {collapsed, setCollapsed} = props;
   return (
-    <Layout>
     <div className="home">
-    <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} />
       <div className="homeContainer">
-        <Navbar  collapsed={collapsed} setCollapsed={setCollapsed} />
+        {/* <Navbar  collapsed={collapsed} setCollapsed={setCollapsed} /> */}
         <div className="widgets">
           <Widget type="user" />
           <Widget type="order" />
@@ -39,14 +37,13 @@ const Home = () => {
           <Widget type="credit" />
         
         </div>
-        <div className="charts">
+        {/* <div className="charts">
           <Chart title="Last 6 Months (Revenue)" aspect={2 / 1} />
           <Featured />
-        </div>
+        </div> */}
     
       </div>
     </div>
-    </Layout>
   );
 };
 

@@ -5,7 +5,7 @@ const AddMerchandiser = () => {
   return (
     <div>
          <Sidebar/>
-         <div className="card border-primary col-9 " style={{marginLeft:"300px",marginTop:"-600px"}}>
+         <div className="card border-primary col-11 " style={{marginLeft:"50px",marginTop:"-600px"}}>
   <div  className="card-header">  
   <h5 className="card-title">ADD MERCHANDISER</h5>
   <div style={{marginLeft:"600px"}} class="btn-group" role="group" aria-label="Basic outlined example">
@@ -24,17 +24,17 @@ const AddMerchandiser = () => {
     
   <div  className="input-wrapper col-md-4" >
   <label htmlFor="first">Full Name</label>
-  <input style={{width:"300px"}} placeholder="Accessory Name" type="text" />
+  <input style={{width:"50px"}} placeholder="Accessory Name" type="text" />
 </div>
 <div  className="input-wrapper col-md-4">
   <label htmlFor="first">Phone</label>
-  <input style={{width:"300px"}} placeholder="phone" type="text" />
+  <input style={{width:"50px"}} placeholder="phone" type="text" />
 </div>
   </div>
 
   <div style={{display:"flex"}}>
 
-  <div style={{height:"50px",marginLeft:"10px",marginTop:"10px",width:"300px"}} class="input-group">
+  <div style={{height:"50px",marginLeft:"10px",marginTop:"10px",width:"50px"}} class="input-group">
   <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
     <option selected>Role</option>
     <option value="1">Admin</option>

@@ -6,7 +6,7 @@ const CreateAccOrder = () => {
   return (
     <div>
       <Sidebar/>
-         <div className="card border-primary col-9 " style={{marginLeft:"300px",marginTop:"-600px"}}>
+         <div className="card border-primary col-11 " style={{marginLeft:"50px",marginTop:"-600px"}}>
   <div  className="card-header">  
   <h5 className="card-title">CREATE ACCESSORY ORDER LIST</h5>
   <div style={{marginLeft:"600px"}} class="btn-group" role="group" aria-label="Basic outlined example">

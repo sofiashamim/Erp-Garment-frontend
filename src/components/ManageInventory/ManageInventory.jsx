@@ -31,7 +31,7 @@ const ManageInventory = () => {
     <div >  
 
 <div className="row" >
-        <div style={{marginLeft:"300px",marginTop:"100px"}} className="col-9">
+        <div style={{marginLeft:"50px",marginTop:"100px"}} className="col-11">
           <div className="card">
             <div className="card-content">
               <div className="card-body titleHead">

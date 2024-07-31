@@ -14,11 +14,11 @@ const Admin = () => {
   return (
     <div>
       <div className="row" >
-        <div style={{marginLeft:"300px",marginTop:"100px"}} className="col-9">
+        <div style={{marginLeft:"50px",marginTop:"100px"}} className="col-11">
           <div className="card">
             <div className="card-content">
               <div style={{display:"flex"}} className="card-body titleHead">
-                <h4 style={{position:"fixed"}} className="card-title">
+                <h4  className="card-title">
                  ADMIN LIST
                   
                 </h4>
@@ -34,7 +34,7 @@ const Admin = () => {
   </ul>
 </div>
                 
-                <div style={{position:"fixed",marginLeft:"600px"}} id='groupBtn' class="btn-group" role="group" aria-label="Basic outlined example">
+                <div style={{marginLeft:"500px"}} id='groupBtn' class="btn-group" role="group" aria-label="Basic outlined example">
   <button type="button" class="btn btn-outline-primary">Admin list</button>
   <button type="button" class="btn btn-outline-primary">Add New Admin</button>
  

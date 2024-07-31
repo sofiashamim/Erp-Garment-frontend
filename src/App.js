@@ -17,15 +17,32 @@ import AddMerchandiser from "./components/userManagement/AddMerchandiser";
 import CommercialList from "./components/userManagement/CommercialList";
 import AddCommercial from "./components/userManagement/AddCommercial";
 import Accountant from "./components/userManagement/Accountant";
+import { useState } from "react";
+import { Content, Header } from "antd/es/layout/layout";
+import { Layout } from "antd";
+import Sidebar from "./components/sidebar/Sidebar";
+import Navbar from "./components/navbar/Navbar";
+
 
 function App() {
+  const [collapsed, setCollapsed] = useState(false);
 
   return (
     <div >
       <BrowserRouter>
+      <Layout>
+      <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} />
+      <Layout>
+        <Header style={{backgroundColor:"white"}}>
+     
+        <Navbar  collapsed={collapsed} setCollapsed={setCollapsed} />
+          
+        </Header>
+      <Content>
+
         <Routes>
           <Route path="/">
-            <Route index element={<Home />} />
+            <Route index element={<Home collapsed={collapsed} setCollapsed={setCollapsed} />} />
             <Route path="login" element={<Login />} />
         
             <Route path="/manageInventory" element={<ManageInventory />} />
@@ -45,6 +62,9 @@ function App() {
             <Route path="/accountant" element={<Accountant />} />
           </Route>
         </Routes>
+        </Content>
+        </Layout>
+        </Layout>
       </BrowserRouter>
     </div>
   );

@@ -28,8 +28,8 @@ const Sidebar = (props) => {
       label: 'Manage Inventory', 
       children: [
         { key: '3-1', label: 'Units' },
-        { key: '3-2', label: 'Accessory List' },
-        { key: '3-3', label: 'Accessories Orders' },
+        { key: '3-2', label: 'Accessory List',link:"/accessory" },
+        { key: '3-3', label: 'Accessories Orders',link:"/accOrderlist" },
       ]
     },
     {
@@ -37,11 +37,11 @@ const Sidebar = (props) => {
       icon: <CreditCardIcon />, 
       label: 'User Management', 
       children: [
-        { key: '4-1', label: 'Admin' },
-        { key: '4-2', label: 'Buyer' },
-        { key: '4-3', label: 'Merchandiser' },
-        { key: '4-4', label: 'Commercial' },
-        { key: '4-5', label: 'Accountant' },
+        { key: '4-1', label: 'Admin',link:"/admin" },
+        { key: '4-2', label: 'Buyer',link:"/buyer" },
+        { key: '4-3', label: 'Merchandiser',link:"/merchandiser" },
+        { key: '4-4', label: 'Commercial',link:"/commercial" },
+        { key: '4-5', label: 'Accountant',link:"/accountant" },
         { key: '4-6', label: 'Production' },
       ]
     },
@@ -66,7 +66,8 @@ const Sidebar = (props) => {
   
   return (
     <Sider trigger={null} collapsible collapsed={collapsed}>
-    <div className="demo-logo-vertical" />
+ 
+    
     <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
       {menuItems.map((item) => (
         item.children ? (

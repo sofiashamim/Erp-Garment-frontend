@@ -1,13 +1,11 @@
 import React from 'react'
-import Sidebar from '../sidebar/Sidebar';
 
-const AddBuyer = () => {
+const AddAccountant = () => {
   return (
     <div>
-        <Sidebar/>
-         <div className="card border-primary col-11 " style={{marginLeft:"50px",marginTop:"-600px"}}>
+       <div className="card border-primary col-11 " style={{marginLeft:"50px",marginTop:"-600px"}}>
   <div  className="card-header">  
-  <h5 className="card-title">ADD BUYER</h5>
+  <h5 className="card-title">ADD ACCOUNTANT</h5>
   <div style={{marginLeft:"600px"}} class="btn-group" role="group" aria-label="Basic outlined example">
   <button type="button" class="btn btn-outline-primary">Accessory list</button>
   <button type="button" class="btn btn-outline-primary">Create Accessory</button>
@@ -79,9 +77,8 @@ const AddBuyer = () => {
 
   </div>
 </div>
-      
     </div>
   )
 }
 
-export default AddBuyer
+export default AddAccountant

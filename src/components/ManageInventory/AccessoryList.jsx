@@ -31,18 +31,18 @@ const AccessoryList = () => {
   return (
     <div>
         <div className="row" >
-        <div style={{marginLeft:"300px",marginTop:"100px"}} className="col-9">
+        <div style={{marginLeft:"50px",marginTop:"100px"}} className="col-11">
           <div className="card">
             <div className="card-content">
               <div className="card-body titleHead">
                 <h4 className="card-title">
-                  UNIT LIST 
+                  ACCESSORY LIST 
                   
                 </h4>
                 
                 <div id='groupBtn' class="btn-group" role="group" aria-label="Basic outlined example">
   <button type="button" class="btn btn-outline-primary">Accessory list</button>
-  <button type="button" class="btn btn-outline-primary">Create Accessory</button>
+  <button to="/createAccess" type="button" class="btn btn-outline-primary">Create Accessory</button>
  
 </div>
               </div>
