@@ -1,6 +1,7 @@
 import React from 'react'
 // import React from 'react'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { Link } from 'react-router-dom';
 
 const AccorderList = () => {
     const data = [
@@ -40,7 +41,7 @@ const AccorderList = () => {
                 
                 <div style={{position:"fixed",marginLeft:"600px"}} id='groupBtn' class="btn-group" role="group" aria-label="Basic outlined example">
   <button type="button" class="btn btn-outline-primary">Accessory list</button>
-  <button type="button" class="btn btn-outline-primary">Create Accessory</button>
+  <button type="button" class="btn btn-outline-primary"><Link to="/createAccorder">Create Accessory</Link></button>
  
 </div>
               </div>

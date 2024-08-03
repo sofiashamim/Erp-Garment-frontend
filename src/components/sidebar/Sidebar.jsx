@@ -27,7 +27,7 @@ const Sidebar = (props) => {
       icon: <StoreIcon />, 
       label: 'Manage Inventory', 
       children: [
-        { key: '3-1', label: 'Units' },
+        { key: '3-1', label: 'Units',link:"/unit" },
         { key: '3-2', label: 'Accessory List',link:"/accessory" },
         { key: '3-3', label: 'Accessories Orders',link:"/accOrderlist" },
       ]
@@ -55,7 +55,16 @@ const Sidebar = (props) => {
       ]
     },
     { key: '6', icon: <InsertChartIcon />, label: 'Party List' },
-    { key: '7', icon: <NotificationsNoneIcon />, label: 'HRM Management' },
+
+    { key: '7',
+       icon: <NotificationsNoneIcon />,
+        label: 'HRM Management',
+        children: [
+          { key: '7-1', label: 'Designation', link:"/designation" },
+          { key: '7-2', label: 'Employee',link:"/employee" },
+          { key: '7-3', label: 'Salaries',link:"/salarylist" },
+        ]
+      },
     { key: '8', icon: <SettingsSystemDaydreamOutlinedIcon />, label: 'Party Due List' },
     { key: '9', icon: <PsychologyOutlinedIcon />, label: 'Loss Profit' },
     { key: '10', icon: <SettingsApplicationsIcon />, label: 'Reports' },
@@ -66,7 +75,10 @@ const Sidebar = (props) => {
   
   return (
     <Sider trigger={null} collapsible collapsed={collapsed}>
- 
+      <div style={{padding:"5px"}}>
+ <img src="https://erpsoftware.acnoo.com/assets/images/logo/backend_logo.svg" alt="Logo"/>
+
+      </div>
     
     <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
       {menuItems.map((item) => (
@@ -74,7 +86,7 @@ const Sidebar = (props) => {
           <Menu.SubMenu key={item.key} icon={item.icon} title={item.label}>
             {item.children.map((child) => (
               <Menu.Item key={child.key}>
-                {child.link ? <Link to={child.link}>{child.label}</Link> : child.label}
+                {child.link ? <Link style={{textDecoration:"none"}} to={child.link}>{child.label}</Link> : child.label}
               </Menu.Item>
             ))}
           </Menu.SubMenu>

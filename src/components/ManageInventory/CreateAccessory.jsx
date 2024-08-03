@@ -1,23 +1,24 @@
 import React from 'react'
 import "./createAccess.scss";
 import Sidebar from '../sidebar/Sidebar';
+import { Link } from 'react-router-dom';
 
 const CreateAccessory = () => {
   return (
     <div>
-      <Sidebar/>
-         <div className="card border-primary col-11 " style={{marginLeft:"50px",marginTop:"-600px"}}>
+    
+         <div className="card border-primary col-11 " style={{marginLeft:"50px",marginTop:"50px"}}>
   <div  className="card-header">  
   <h5 className="card-title">CREATE NEW ACCESSORY LIST</h5>
   <div style={{marginLeft:"600px"}} class="btn-group" role="group" aria-label="Basic outlined example">
-  <button type="button" class="btn btn-outline-primary">Accessory list</button>
+  <button type="button" class="btn btn-outline-primary"><Link to="/accessory">Accessory list</Link></button>
   <button type="button" class="btn btn-outline-primary">Create Accessory</button>
  
 </div>
 </div>
-  <div className="card-body ">
+  {/* <div className="card-body ">
     
-    {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
+    
 <div className="container">
 
     <form>
@@ -64,7 +65,46 @@ const CreateAccessory = () => {
 </form>
 </div>
 
-  </div>
+  </div> */}
+        <div className="card-body">
+          <form>
+            <div className="row mb-2">
+              <div className="col input-wrapper">
+              <label htmlFor="first">Accessory Name</label>
+                <input type="text" className="form-control input-wrapper" placeholder="Name" />
+
+              </div>
+              <div className="col input-wrapper">
+              <label htmlFor="phone">phone</label>
+
+                <input type="text" className="form-control" placeholder="Phone number" />
+              </div>
+              
+            </div>
+            <div className="row mb-2">
+              <div className="col input-wrapper">
+              <label htmlFor="Address">Address</label>
+
+                <input type="text" className="form-control" placeholder="Address" />
+              </div>
+              <div className="col input-wrapper">
+                <select className="form-control">
+                  <option value="">Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            
+            </div>
+         
+        
+          </form>
+          <div style={{padding:"10px", marginLeft:"300px",marginTop:"10px"}}>
+<button style={{width:"150px",marginRight:"5px"}} type="button" class="btn btn-outline-secondary btn-lg">Cancel</button>
+<button style={{width:"150px",marginRight:"5px"}} type="button" class="btn btn-primary btn-lg">Save</button>
+</div>
+        </div>
 </div>
       
     </div>

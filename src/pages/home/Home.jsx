@@ -6,9 +6,11 @@ import Featured from "../../components/featured/Featured";
 import Chart from "../../components/chart/Chart";
 import {  useState } from "react";
 import { Layout, Menu } from "antd";
+import { Pie, PieChart } from "recharts";
 
 const Home = (props) => {
   const {collapsed, setCollapsed} = props;
+
   return (
     <div className="home">
       <div className="homeContainer">
@@ -37,10 +39,11 @@ const Home = (props) => {
           <Widget type="credit" />
         
         </div>
-        {/* <div className="charts">
-          <Chart title="Last 6 Months (Revenue)" aspect={2 / 1} />
+        <div className="charts">
+          <Chart title="Last 6 Months (Revenue)" aspect={ 1} />
           <Featured />
-        </div> */}
+        </div>
+     
     
       </div>
     </div>

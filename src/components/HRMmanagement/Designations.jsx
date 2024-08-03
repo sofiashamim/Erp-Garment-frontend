@@ -1,32 +1,52 @@
 import React from 'react'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { Link } from 'react-router-dom';
 
-const Admin = () => {
+const Designations = () => {
     const data = [
         {
           id: 1,
-          name: 'rr',
-          phone:'PESO',
-          userName:'$12.00',
+          designation: 'rr',
+          description:'PESO',
           action: <MoreVertIcon/>,
          }]
 
   return (
     <div>
-      <div className="row" >
+       <div className="row" >
         <div style={{marginLeft:"50px",marginTop:"100px"}} className="col-11">
           <div className="card">
             <div className="card-content">
-          
-                 <div style={{display:"flex"}} className="card-body titleHead">
+              {/* <div style={{display:"flex"}} className="card-body titleHead">
                 <h4  className="card-title">
-                ADMIN LIST                  
+                 DESIGNATION LIST
+                  
+                </h4>
+
+                <div style={{marginTop:"100px",marginRight:"100px"}} class="dropdown">
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    All result
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
+                
+                <div style={{marginLeft:"500px"}} id='groupBtn' class="btn-group" role="group" aria-label="Basic outlined example">
+  <button type="button" class="btn btn-outline-primary">Designation list</button>
+  <button type="button" class="btn btn-outline-primary">Add Designation</button>
+ 
+</div>
+              </div> */}
+                    <div style={{display:"flex"}} className="card-body titleHead">
+                <h4  className="card-title">
+                DESIGNATION LIST                  
                 </h4>
                 <div style={{flexDirection: "row",
     alignItems: "baseline"}} id='groupBtn' class="btn-group" role="group" aria-label="Basic outlined example">
-     <button type="button" class="btn btn-outline-primary"  ><Link to="/admin">Admin list</Link></button>
-     <button type="button" class="btn btn-outline-primary"><Link to="/newAdmin">Add New Admin</Link></button>
+  <button type="button" class="btn btn-outline-primary">Designation list</button>
+  <button type="button" class="btn btn-outline-primary">Add New Designation</button>
  
 </div>
               </div>
@@ -46,16 +66,13 @@ const Admin = () => {
   <input type="text" class="form-control" placeholder="search"/>
 </div>
               </div>
-
-<div>
         <div className="table-responsive">
           <table className="table mb-0">
             <thead>
               <tr>
                 <th>SL.</th>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>User Name</th>
+                <th>Designation</th>
+                <th>Description</th>
                 <th>Action</th>
                 
                 
@@ -65,9 +82,8 @@ const Admin = () => {
               {data.map((item) => (
                 <tr key={item.id}>
                   <td>{item.id}</td>
-                  <td>{item.name}</td>
-                  <td>{item.phone}</td>
-                  <td>{item.userName}</td>
+                  <td>{item.designation}</td>
+                  <td>{item.description}</td>
                   <td>{item.action}</td>
               
                 </tr>
@@ -75,9 +91,6 @@ const Admin = () => {
             </tbody>
           </table>
         </div>
-</div>
-
-
         </div>
           </div>
         </div>
@@ -86,4 +99,4 @@ const Admin = () => {
   )
 }
 
-export default Admin
+export default Designations

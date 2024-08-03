@@ -2,15 +2,12 @@ import React from 'react'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Link } from 'react-router-dom';
 
-const AccessoryList = () => {
+const UnitList = () => {
 
     const data = [
         {
           id: 1,
           name: 'rr',
-          unit:'PESO',
-          price:'$12.00',
-          description:'silk',
           status: <div className="form-check form-switch">
   <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" defaultChecked />
 </div>,
@@ -19,9 +16,6 @@ const AccessoryList = () => {
          {
             id: 2,
             name: 'rr',
-            unit:'PESO',
-            price:'$12.00',
-            description:'silk',
             status: <div className="form-check form-switch">
     <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" defaultChecked />
   </div>,
@@ -31,47 +25,21 @@ const AccessoryList = () => {
 
   return (
     <div>
-        <div className="row" >
+       <div className="row" >
         <div style={{marginLeft:"50px",marginTop:"100px"}} className="col-11">
           <div className="card">
             <div className="card-content">
-              {/* <div className="card-body titleHead">
+              <div className="card-body titleHead">
                 <h4 className="card-title">
-                  ACCESSORY LIST 
+                  UNIT LIST 
                   
                 </h4>
                 
                 <div id='groupBtn' class="btn-group" role="group" aria-label="Basic outlined example">
-  <button type="button" class="btn btn-outline-primary">Accessory list</button>
-  <button to="/createAccess" type="button" class="btn btn-outline-primary">Create Accessory</button>
+  <button type="button" class="btn btn-outline-primary">Unit list</button>
+            
+  <button  type="button" class="btn btn-outline-primary"><Link to="/createUnit">Create Unit list</Link></button>
  
-</div>
-              </div> */}
-                    <div style={{display:"flex"}} className="card-body titleHead">
-                <h4  className="card-title">
-                ACCESSORY LIST                  
-                </h4>
-                <div style={{flexDirection: "row",
-    alignItems: "baseline"}} id='groupBtn' class="btn-group" role="group" aria-label="Basic outlined example">
-  <button type="button" class="btn btn-outline-primary">Accessory list</button>
-  <button type="button" class="btn btn-outline-primary"><Link to="/createAccess">Add New Accessory</Link></button>
- 
-</div>
-              </div>
-              <hr />
-              <div style={{display:"flex"}}>
-              <div style={{marginLeft:"10px",alignSelf:"center"}} class="dropdown mx-4">
-  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    All result
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-  </ul>
-</div>
-<div>
-  <input type="text" class="form-control" placeholder="search"/>
 </div>
               </div>
         <div className="table-responsive">
@@ -80,9 +48,6 @@ const AccessoryList = () => {
               <tr>
                 <th>SL.</th>
                 <th>Name</th>
-                <th>Unit</th>
-                <th>Price</th>
-                <th>Description</th>
                 <th>Status</th>
                 <th>Action</th>
                 
@@ -94,9 +59,6 @@ const AccessoryList = () => {
                 <tr key={item.id}>
                   <td>{item.id}</td>
                   <td>{item.name}</td>
-                  <td>{item.unit}</td>
-                  <td>{item.price}</td>
-                  <td>{item.description}</td>
                   <td>{item.status}</td>
                   <td>{item.action}</td>
                   {/* <td>{item.perDeliveryCharge}</td> */}
@@ -112,9 +74,8 @@ const AccessoryList = () => {
           </div>
         </div>
       </div>
-      
     </div>
   )
 }
 
-export default AccessoryList
+export default UnitList

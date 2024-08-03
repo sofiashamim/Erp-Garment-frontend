@@ -10,8 +10,8 @@ const CreateUnitt = () => {
   <div  className="card-header">  
   <h5 className="card-title">CREATE NEW UNIT LIST</h5>
   <div style={{marginLeft:"600px"}} class="btn-group" role="group" aria-label="Basic outlined example">
-  <button type="button" class="btn btn-outline-primary">Accessory list</button>
-  <button type="button" class="btn btn-outline-primary">Create Accessory</button>
+  <button type="button" class="btn btn-outline-primary"><Link to="/unit">Unit list</Link></button>
+  <button type="button" class="btn btn-outline-primary">Create New Unit</button>
  
 </div>
 </div>
