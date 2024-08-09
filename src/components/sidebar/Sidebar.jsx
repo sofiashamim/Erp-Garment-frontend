@@ -50,8 +50,9 @@ const Sidebar = (props) => {
       icon: <LocalShippingIcon />, 
       label: 'Accounts & Bank', 
       children: [
-        { key: '5-1', label: 'Commercial' },
-        { key: '5-2', label: 'General' },
+        { key: '5-1', label: 'Bank Account',link:"/bankAcc" },
+        { key: '5-2', label: 'Cash In Hand',link:"/cash" },
+        { key: '5-3', label: 'Cheques',link:"/cheques" },
       ]
     },
     { key: '6', icon: <InsertChartIcon />, label: 'Party List' },

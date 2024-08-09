@@ -35,6 +35,9 @@ import AddProd from "./components/userManagement/AddProd";
 import ExpList from "./components/lossProfit/ExpList";
 import LossprofitList from "./components/lossProfit/LossprofitList";
 import IncomeList from "./components/lossProfit/IncomeList";
+import BankAccount from "./components/accountBank/BankAccount";
+import CashInHand from "./components/accountBank/CashInHand";
+import Cheques from "./components/accountBank/Cheques";
 
 
 
@@ -88,6 +91,9 @@ function App() {
             <Route path="/lossprofit" element={<LossprofitList />} />
             <Route path="/incomeList" element={<IncomeList />} />
             <Route path="/expList" element={<ExpList/>}/>
+            <Route path="/bankacc" element={<BankAccount/>}/>
+            <Route path="/cash" element={<CashInHand/>}/>
+            <Route path="/cheques" element={<Cheques/>}/>
             
      
             
