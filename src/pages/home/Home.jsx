@@ -40,7 +40,7 @@ const Home = (props) => {
         
         </div>
         <div className="charts">
-          <Chart title="Last 6 Months (Revenue)" aspect={ 1} />
+          {/* <Chart title="Last 6 Months (Revenue)" aspect={ 1} /> */}
           <Featured />
         </div>
      

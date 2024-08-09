@@ -42,7 +42,7 @@ const Sidebar = (props) => {
         { key: '4-3', label: 'Merchandiser',link:"/merchandiser" },
         { key: '4-4', label: 'Commercial',link:"/commercial" },
         { key: '4-5', label: 'Accountant',link:"/accountant" },
-        { key: '4-6', label: 'Production' },
+        { key: '4-6', label: 'Production',link:"/production" },
       ]
     },
     {
@@ -66,7 +66,13 @@ const Sidebar = (props) => {
         ]
       },
     { key: '8', icon: <SettingsSystemDaydreamOutlinedIcon />, label: 'Party Due List' },
-    { key: '9', icon: <PsychologyOutlinedIcon />, label: 'Loss Profit' },
+    { key: '9', icon: <PsychologyOutlinedIcon />, label: 'Loss Profit',
+      children: [
+        { key: '9-1', label: 'lossprofit', link:"/lossprofit" },
+        { key: '9-2', label: 'expense-list',link:"/expList" },
+        { key: '9-3', label: 'lossprofit',link:"/hhhhhh" },
+      ]
+     },
     { key: '10', icon: <SettingsApplicationsIcon />, label: 'Reports' },
     { key: '11', icon: <AccountCircleOutlinedIcon />, label: 'Roles and Permission' },
     { key: '12', icon: <ExitToAppIcon />, label: 'Logout' },

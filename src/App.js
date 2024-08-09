@@ -17,7 +17,7 @@ import AddMerchandiser from "./components/userManagement/AddMerchandiser";
 import CommercialList from "./components/userManagement/CommercialList";
 import AddCommercial from "./components/userManagement/AddCommercial";
 import Accountant from "./components/userManagement/Accountant";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Content, Header } from "antd/es/layout/layout";
 import { Layout } from "antd";
 import Sidebar from "./components/sidebar/Sidebar";
@@ -30,13 +30,19 @@ import AddEmployee from "./components/HRMmanagement/AddEmployee";
 import PayS from "./components/HRMmanagement/PayS";
 import SalaryList from "./components/HRMmanagement/SalaryList";
 import AddAccountant from "./components/userManagement/AddAccountant";
+import ProductionList from "./components/userManagement/ProductionList";
+import AddProd from "./components/userManagement/AddProd";
+import ExpList from "./components/lossProfit/ExpList";
+import LossprofitList from "./components/lossProfit/LossprofitList";
+import IncomeList from "./components/lossProfit/IncomeList";
+
 
 
 
 
 function App() {
   const [collapsed, setCollapsed] = useState(false);
-
+ 
   return (
     <div >
       <BrowserRouter>
@@ -77,6 +83,15 @@ function App() {
             <Route path="/employee" element={<Employees />} />
             <Route path="/addemp" element={<AddEmployee />} />
             <Route path="/salarylist" element={<SalaryList />} />
+            <Route path="/production" element={<ProductionList />} />
+            <Route path="/createProd" element={<AddProd />} />
+            <Route path="/lossprofit" element={<LossprofitList />} />
+            <Route path="/incomeList" element={<IncomeList />} />
+            <Route path="/expList" element={<ExpList/>}/>
+            
+     
+            
+
             
            
           </Route>
